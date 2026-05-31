@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
     memset(&adresseServeur, 0, sizeof(adresseServeur));
 
     adresseServeur.sin_family = AF_INET;
-    adresseServeur.sin_port = htons(atoi(argv[2]));
+    adresseServeur.sin_port = htons(atoi(argv[2])); //port et inet_pton @ip
 
     if (inet_pton(AF_INET, argv[1], &adresseServeur.sin_addr) <= 0)
     {
